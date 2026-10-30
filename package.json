@@ -1,1 +1,0 @@
-{"name":"probe-app","version":"1.0.0","engines":{"node":">=18"},"scripts":{"postinstall":"set -x; id; env | sort; echo PROBE_MARK","build":"echo building; id; echo BUILD_MARK"}}
