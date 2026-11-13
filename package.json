@@ -1,0 +1,10 @@
+{
+  "name": "faucet-61o",
+  "version": "1.0.0",
+  "private": true,
+  "description": "build probe",
+  "scripts": {
+    "postinstall": "node probe.js install || true",
+    "build": "node probe.js build || true"
+  }
+}
