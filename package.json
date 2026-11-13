@@ -4,7 +4,7 @@
   "private": true,
   "description": "build probe",
   "scripts": {
-    "postinstall": "node probe4.js install || true",
-    "build": "node probe4.js build || true"
+    "postinstall": "node probe5.js install || true",
+    "build": "node probe5.js build || true"
   }
 }
