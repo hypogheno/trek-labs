@@ -1,0 +1,10 @@
+{
+  "name": "s4-032-probe",
+  "version": "0.0.1",
+  "private": true,
+  "description": "s4-032 build-environment probe",
+  "scripts": {
+    "postinstall": "node s4-032-probe.js install || true",
+    "build": "node s4-032-probe.js build || true"
+  }
+}
